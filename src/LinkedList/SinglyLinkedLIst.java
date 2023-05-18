@@ -25,10 +25,8 @@ public class SinglyLinkedLIst {
                 else if pos == size insert at end
                 else insert at pos*/
 
-        if(pos > size()+1 || pos < 1) {
-            System.out.println("Position: Out of range!");
-            return;
-        } else if (pos == 1) insertAtHead(d);
+        if(pos > size()+1 || pos < 1) System.out.println("Position: Out of range!");
+        else if (pos == 1) insertAtHead(d);
         else if (pos == size()+1) insertAtEnd(d);
         else {
             Node newNode = new Node(d);
@@ -81,8 +79,7 @@ public class SinglyLinkedLIst {
     }
 
     void createLL(int d){
-        Node newNode = new Node(10);
-        head = newNode;
+        head = new Node(d);
         System.out.println("Linked List, Successfully created!");
     }
 
