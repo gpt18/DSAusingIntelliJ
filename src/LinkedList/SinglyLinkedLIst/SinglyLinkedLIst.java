@@ -1,7 +1,81 @@
-package LinkedList;
+package LinkedList.SinglyLinkedLIst;
 
 public class SinglyLinkedLIst {
     static Node head = null;
+
+    void delete(int d){
+        if(isEmptyList("delete")) return;
+
+        Node temp = head;
+        Node pre = temp;
+        int i = 1;
+        while (i <= size()){
+            if(temp.data == d && temp == head) {
+                deleteFromHead();
+                return;
+            }else if(temp.data == d && temp.next == null){
+                deleteFromEnd();
+                return;
+            }else{
+                if(temp.data == d){
+                    pre.next = temp.next;
+                    temp.next = null;
+                    return;
+                }
+            }
+
+            pre = temp;
+            temp = temp.next;
+            i++;
+        }
+
+        if(i>size()) System.out.println("Data not found in the list!");
+
+    }
+
+
+    void deleteFromPosition(int pos){
+        if(isEmptyList("deleteFromPosition")) return;
+
+        if(pos > size() || pos < 1) System.out.println("Delete Position: Out of range!");
+        else if (pos == 1) deleteFromHead();
+        else if (pos == size()) deleteFromEnd();
+        else {
+
+            Node temp = head;
+            Node pre = temp;
+            int i = 1;
+            while (i <= pos-1){
+                pre = temp;
+                temp = temp.next;
+                i++;
+            }
+            pre.next = temp.next;
+            temp.next = null;
+        }
+    }
+
+    void deleteFromEnd() {
+        if(isEmptyList("deleteFromEnd")) return;
+
+        Node temp = head;
+        Node pre = temp;
+        while(temp.next != null){
+            pre = temp;
+            temp = temp.next;
+        }
+
+        pre.next = null;
+    }
+
+    void deleteFromHead() {
+        if(isEmptyList("deleteFromHead")) return;
+
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+    }
+
 
     int size(){
         Node temp = head;
@@ -75,6 +149,7 @@ public class SinglyLinkedLIst {
             temp = temp.next;
         }
         System.out.println("null");
+        System.out.println("head: "+head.data+"\tsize: "+size()+"\n");
 
     }
 
@@ -104,6 +179,8 @@ public class SinglyLinkedLIst {
         list.insertAtPosition(40,3);
         list.display();
         list.insertAtEnd(60);
+        list.display();
+        list.delete(20);
         list.display();
 
     }
