@@ -58,7 +58,8 @@ public class Main {
     public static void main(String[] args) {
 //a+b*(c^d-e)^(f+g*h)-i
         //K+L-M*N+(O+P)*W/U/V*T+Q
-        String infix = "K+L-M*N+(O+P)*W/U/V*T+Q";
+//        (a-b/c)*(a/k-l)
+        String infix = "a*(b+d)/e-f*(g+h/k)";
         System.out.println(infixToPostfix(infix));
 
     }
