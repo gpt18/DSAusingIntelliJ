@@ -14,8 +14,9 @@ public class Test {
 
 //        cool();
 
-        problem1();
+//        problem1();
 
+        stringB();
 
     }
 
@@ -112,6 +113,12 @@ public class Test {
         System.out.println("StringBuilder: " + sb.deleteCharAt(2));
         System.out.println("StringBuilder: " + sb.delete(0,3));
         char c = sb.charAt(5);
+        char[] cc = String.valueOf(sb).toCharArray();
+        for(int i =0; i<cc.length; i++){
+            int cha = ((int) cc[i]) + 2;
+            cc[i] = (char) cha;
+        }
+        System.out.println(String.valueOf(cc));
         System.out.println("StringBuilder: " + sb + " char: "+c);
         sb.setCharAt(1, 'v');
         System.out.println("StringBuilder: " + sb);
