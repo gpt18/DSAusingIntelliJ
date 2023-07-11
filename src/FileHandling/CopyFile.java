@@ -1,4 +1,4 @@
-package FileInputOutput;
+package FileHandling;
 
 import java.io.File;
 import java.io.FileInputStream;
