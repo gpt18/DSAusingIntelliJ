@@ -22,6 +22,13 @@ public class BackgroundColorChanger extends JFrame implements ActionListener {
         add(button);
         add(label);
 
+//
+//        timeSeconds.addListener((observable, oldTimeValue, newTimeValue) -> {
+//            // code to execute here...
+//            // e.g.
+//            System.out.println("Time left: "+newTimeValue);
+//        });
+
         timer = new Timer(500, new ActionListener() {
             private boolean visible = true;
 
