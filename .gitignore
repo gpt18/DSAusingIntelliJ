@@ -31,3 +31,5 @@ bin/
 *.class
 tempCodeRunnerFile.java
 **/.cph/
+
+*.exe
