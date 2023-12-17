@@ -1,7 +1,7 @@
 public class Q4 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
-        System.out.println(sol.largestOddNumber("75423511611"));
+        Solution2 sol = new Solution2();
+        System.out.println(sol.largestOddNumber("7542351161125456"));
     }
 }
 

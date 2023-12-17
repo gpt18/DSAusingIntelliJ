@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q2 {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
@@ -30,7 +30,7 @@ public class Q2 {
         }
 
         
-        System.out.print(vehicle);
+        System.out.println(vehicle);
     }
 
 }
